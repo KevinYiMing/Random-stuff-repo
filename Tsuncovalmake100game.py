@@ -10,7 +10,7 @@ while run:
         run = False
     elif play !=  "play":
         print("Ugh, why haven't you typed 'play' yet, idiot?! It's not like I care or anything! I just thought it would be more fun if you did, okay?! D-Don't get the wrong idea!")
-        play = input("Play game! please type: play"+ "\n").lower()
+        play = input("D-Don't get the wrong idea! p-play game! if you i-insist type: play... n-not that I care or anything!"+ "\n").lower()
     else:
         while True:
             print("\nc-currently the number is on " + str(currentnumber) + "/100... n-not that I care or anything!" )
