@@ -3,7 +3,7 @@ options = [0,0,0,0]
 selected = False
 run = True
 currentnumber = 0
-while run == True:
+while run:
     play = input("W-well, since you asked... m-make p-perfect 100! if you insist type: play... d-don't read into it!" + "\n").lower()
     if play == "quit" or play == "no":
         print("D-Don't get the wrong idea! h-hmmff f-f-f-fine I didn't want to play a-anyways... i-it's whatever.")
@@ -12,17 +12,15 @@ while run == True:
         print("Ugh, why haven't you typed 'play' yet, idiot?! It's not like I care or anything! I just thought it would be more fun if you did, okay?! D-Don't get the wrong idea!")
         play = input("Play game! please type: play"+ "\n").lower()
     else:
-        while play == "play":
+        while True:
             print("\nc-currently the number is on " + str(currentnumber) + "/100... n-not that I care or anything!" )
             for i in range (4):
                 options[i] = random.randint(1,11)
             picked = input(str(options) + " Hmph! Fine! w-which number do you want to pick Hmph, it's not like I'm waiting!"+ "\n")
             for i in range (4):
                 if str(options[i]) == picked:
-                    selected = True
-            if selected == True:
-                currentnumber += int(picked)
-                selected = False
+                    currentnumber += int(picked)
+                    break
             else:
                 print("\nU-ugh! Seriously, you didn't even bother to pick an option, huh? Not that I care or anything! I just... I mean, whatever! Just don’t make me wait next time, okay?! It's not like I’m worried or anything... Hmph!")
 
